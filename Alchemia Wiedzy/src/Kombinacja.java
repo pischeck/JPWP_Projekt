@@ -40,9 +40,9 @@ public class Kombinacja {
                     String nazwa2 = czesci[1].trim();
                     String wynik = czesci[2].trim();
 
-                    Element e1 = znajdzElement(elementy, nazwa1);
-                    Element e2 = znajdzElement(elementy, nazwa2);
-                    Element wynikE1 = znajdzElement(elementy, wynik);
+                    Element e1 = Element.znajdzElement(elementy, nazwa1);
+                    Element e2 = Element.znajdzElement(elementy, nazwa2);
+                    Element wynikE1 = Element.znajdzElement(elementy, wynik);
 
                     if(e1 != null && e2 != null && wynikE1 != null) {
                         kombinacje.add(new Kombinacja(e1, e2, wynikE1));
@@ -57,12 +57,5 @@ public class Kombinacja {
         return kombinacje;
     }
 
-    private static Element znajdzElement(List<Element> elementy, String nazwa) {
-        for (Element e : elementy) {
-            if(e.getNazwa().equalsIgnoreCase(nazwa)) {
-                return e;
-            }
-        }
-        return null;
-    }
+
 }

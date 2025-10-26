@@ -57,5 +57,15 @@ public class Element {
         }
         return elementy;
     }
+
+    public static Element znajdzElement(List<Element> elementy, String nazwa) {
+        for (Element e : elementy) {
+            if (e.getNazwa().equalsIgnoreCase(nazwa)) {
+                return e;
+            }
+        }
+        return null;
+    }
+
 }
 
