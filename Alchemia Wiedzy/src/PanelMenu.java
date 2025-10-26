@@ -7,6 +7,5 @@ public class PanelMenu extends JPanel {
     private JButton btnZapisz;
     private JButton btnWczytaj;
 
-    public void aktualizujListe(List<Element> elementy);
-    public void aktualizujPostep(int odkryte, int wszystkie);
+
 }

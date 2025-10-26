@@ -5,5 +5,4 @@ public class DialogOpis extends JDialog {
     private JTextArea textAreaOpis;
     private JButton btnOK;
 
-    public void pokazOpis(Element element);
 }

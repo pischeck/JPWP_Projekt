@@ -1,0 +1,5 @@
+Woda;Postawowy Element;icons/woda.png
+Ogień;Podstawowy Element;icons/ogien.png
+Ziemia;Podstawowy Element;icons/ziemia.png
+Powietrze;Podstawowy Element;icons/ziemia.png
+
