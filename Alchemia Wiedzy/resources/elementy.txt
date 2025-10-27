@@ -25,8 +25,7 @@ Cegła;Materiał budowlany wypalany z gliny.;icons/cegla.png
 Drewno;Materiał roślinny o włóknistej strukturze używany do budowy.;icons/drewno.png
 Drzewo;Organizm wieloletni o zdrewniałym pniu i liściach lub igłach.;icons/drzewo.png
 Tlen;Pierwiastek chemiczny niezbędny do oddychania i spalania.;icons/tlen.png
-Wodor;Najlżejszy pierwiastek chemiczny, paliwo i składnik wody.;icons/wodor.png
-Kamfora;Substancja organiczna o właściwościach zapachowych i leczniczych.;icons/kamfora.png
+Wodór;Najlżejszy pierwiastek chemiczny, paliwo i składnik wody.;icons/wodor.png
 Wulkan;Góra z otworem, przez który wydobywa się lawa, dym i popioły.;icons/wulkan.png
 Rzeka;Naturalny ciek wodny płynący po powierzchni ziemi.;icons/rzeka.png
 Morze;Znaczna część oceanu oddzielona od niego półwyspami lub wyspami.;icons/morze.png
@@ -35,28 +34,18 @@ Bakteria;Mikroorganizm jednokomórkowy rozmnażający się przez podział.;icons
 Życie;Proces metaboliczny i biologiczny charakteryzujący organizmy.;icons/zycie.png
 Zwierzę;Organizm wielokomórkowy zdolny do ruchu i odczuwania.;icons/zwierze.png
 Człowiek;Istota rozumna gatunku Homo sapiens.;icons/czlowiek.png
-Kość;Twarda tkanka stanowiąca rusztowanie organizmu.;icons/kosc.png
-Krew;Płyn ustrojowy transportujący tlen i składniki odżywcze.;icons/krew.png
-Skóra;Tkanka pokrywająca i chroniąca ciało organizmu.;icons/skora.png
-Cień;Obszar, do którego nie dociera światło.;icons/cien.png
 Światło;Promieniowanie widzialne umożliwiające widzenie.;icons/swiatlo.png
 Ciepło;Forma energii przepływającej w wyniku różnicy temperatur.;icons/cieplo.png
 Zimno;Stan charakteryzujący się obniżoną temperaturą.;icons/zimno.png
 Dźwięk;Fala mechaniczna rozchodząca się w ośrodku materialnym.;icons/dzwiek.png
-Metal;Czysty pierwiastek lub stop o połysku metalicznym.;icons/metal.png
 Złoto;Pierwiastek chemiczny Au, metal szlachetny.;icons/zloto.png
 Srebro;Pierwiastek chemiczny Ag, metal szlachetny o dobrym przewodnictwie.;icons/srebro.png
 Żelazo;Pierwiastek chemiczny Fe, jeden z najpowszechniej używanych metali.;icons/zelazo.png
-Tlenek;Związek chemiczny pierwiastka z tlenem.;icons/tlenek.png
-Sól;Związek jonowy powstały z reakcji kwasu i zasady.;icons/sol.png
-Kwasy;Związki chemiczne oddające proton H+ w roztworze wodnym.;icons/kwas.png
-Zasada;Związek chemiczny zdolny do przyjmowania protonu H+.;icons/zasada.png
 Glina;Materiał ilasty używany w ceramice i budownictwie.;icons/glina.png
 Proch;Mieszanina substancji wybuchowych stosowana w pirotechnice.;icons/proch.png
 Pies;Ssak udomowiony, towarzysz człowieka.;icons/pies.png
 Ryba;Organizm wodny oddychający skrzelami.;icons/ryba.png
 Ptak;Organizm stałocieplny zdolny do lotu, posiadający pióra.;icons/ptak.png
-Jajo;Komórka lub struktura rozrodcza zwierząt.;icons/jajo.png
 Mgła;Zawiesina mikroskopijnych kropelek wody w powietrzu.;icons/mgla.png
 Burza;Zjawisko atmosferyczne z intensywnymi opadami i piorunami.;icons/burza.png
 Skała;Naturalny agregat mineralny stanowiący litosferę Ziemi.;icons/skala.png
