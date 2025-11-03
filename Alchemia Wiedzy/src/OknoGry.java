@@ -8,6 +8,7 @@ public class OknoGry extends JFrame {
     public OknoGry() {
         setTitle("Alchemia Wiedzy");
         setSize(1280, 1024);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
