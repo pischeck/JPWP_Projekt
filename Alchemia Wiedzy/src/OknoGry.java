@@ -2,22 +2,32 @@ import javax.swing.*;
 import java.awt.*;
 
 public class OknoGry extends JFrame {
+    private CardLayout cardLayout;
+    private JPanel contentPanel;
 
     public OknoGry() {
-        super("Alchemia Wiedzy");
-        setResizable(false); // stala wielkosc okna graficznego
-        setSize(1280,1024);
-        setLayout(new BorderLayout());
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Alchemia Wiedzy");
+        setSize(1280, 1024);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        cardLayout = new CardLayout();
+        contentPanel = new JPanel(cardLayout);
+
+        PanelPoczatkowy panelPoczatkowy = new PanelPoczatkowy(this);
+        contentPanel.add(panelPoczatkowy, "start");
 
         PanelGry panelGry = new PanelGry();
-        PrawyPanel panelPrawy = new PrawyPanel();
+        contentPanel.add(panelGry, "gra");
 
+        add(contentPanel);
 
-        add(panelGry, BorderLayout.CENTER);
-        add(panelPrawy, BorderLayout.EAST);
-
-        setVisible(true);
+        pokazPanel("start");
     }
 
+    public void pokazPanel(String nazwaPanelu) {
+        cardLayout.show(contentPanel, nazwaPanelu);
+    }
 }
+
+
