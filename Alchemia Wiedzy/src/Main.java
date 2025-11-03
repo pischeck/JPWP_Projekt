@@ -10,6 +10,7 @@ public class Main {
 
 
         OknoGry gra = new OknoGry();
+        //test
 
     }
 }
