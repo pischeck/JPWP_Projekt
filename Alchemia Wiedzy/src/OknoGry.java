@@ -14,15 +14,15 @@ public class OknoGry extends JFrame {
         cardLayout = new CardLayout();
         contentPanel = new JPanel(cardLayout);
 
-        PanelPoczatkowy panelPoczatkowy = new PanelPoczatkowy(this);
-        contentPanel.add(panelPoczatkowy, "start");
+        PanelMenu panelMenu = new PanelMenu(this);
+        contentPanel.add(panelMenu, "menu");
 
-        PanelGry panelGry = new PanelGry();
+        PanelGry panelGry = new PanelGry(this);
         contentPanel.add(panelGry, "gra");
 
         add(contentPanel);
 
-        pokazPanel("start");
+        pokazPanel("menu");
     }
 
     public void pokazPanel(String nazwaPanelu) {

@@ -2,9 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelGry extends JPanel {
-    public PanelGry() {
-        JLabel graPanel = new JLabel("Tu zaczyna sie gra", JLabel.CENTER);
-        graPanel.setFont(new Font("Arial", Font.BOLD, 20));
-        add(graPanel);
+    private OknoGry okno;
+
+    public PanelGry(OknoGry okno) {
+        this.okno = okno;
+        setLayout(new BorderLayout());
+
+        JButton menuButton = new JButton("Powrot do menu");
+        menuButton.setFont(new Font("Serif", Font.PLAIN, 18));
+        add(menuButton, BorderLayout.SOUTH);
+
+        menuButton.addActionListener(e -> {
+            okno.pokazPanel("menu");
+        });
     }
 }
