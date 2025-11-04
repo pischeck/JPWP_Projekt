@@ -12,6 +12,7 @@ public class PanelMenu extends JPanel {
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
+        // Nazwa gry z ikoną -----------------------------
         ImageIcon ikonaAlchemy = new ImageIcon(Config.IKONA_ALCHEMY);
         Image image = ikonaAlchemy.getImage();
         Image scaledImage = image.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
@@ -21,10 +22,12 @@ public class PanelMenu extends JPanel {
         powitanieLabel.setFont(new Font("Arial", Font.BOLD, 50));
         powitanieLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Kolory przycisków -----------------------
         Color buttonColor = new Color(198,141,122);
         Color buttonTextColor = new Color(0, 0, 0);
         Color buttonBorderColor = new Color(0, 0, 0);
 
+        // Przycisk rozpoczynajacy gre
         JButton startButton = new JButton("Rozpocznij grę");
         startButton.setFont(new Font("Arial", Font.PLAIN, 24));
         startButton.setBackground(buttonColor);
@@ -33,14 +36,16 @@ public class PanelMenu extends JPanel {
         startButton.setMaximumSize(new Dimension(550, 600));
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JButton optionsButton = new JButton("Ustawienia");
-        optionsButton.setFont(new Font("Arial", Font.PLAIN, 24));
-        optionsButton.setBackground(buttonColor);
-        optionsButton.setForeground(buttonTextColor);
-        optionsButton.setBorder(BorderFactory.createLineBorder(buttonBorderColor, 3));
-        optionsButton.setMaximumSize(new Dimension(550, 400));
-        optionsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        // Przycisk z misjami --------
+        JButton missionButton = new JButton("Misje");
+        missionButton.setFont(new Font("Arial", Font.PLAIN, 24));
+        missionButton.setBackground(buttonColor);
+        missionButton.setForeground(buttonTextColor);
+        missionButton.setBorder(BorderFactory.createLineBorder(buttonBorderColor, 3));
+        missionButton.setMaximumSize(new Dimension(550, 400));
+        missionButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Przycisk z info o twórcy ----------
         JButton infoButton = new JButton("Informacje o twórcy");
         infoButton.setFont(new Font("Arial", Font.PLAIN, 24));
         infoButton.setBackground(buttonColor);
@@ -49,6 +54,7 @@ public class PanelMenu extends JPanel {
         infoButton.setMaximumSize(new Dimension(550, 400));
         infoButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Przycisk do wyjscia z gry ---------
         JButton exitButton = new JButton("Wyjście z gry");
         exitButton.setFont(new Font("Arial", Font.PLAIN, 24));
         exitButton.setBackground(buttonColor);
@@ -57,29 +63,45 @@ public class PanelMenu extends JPanel {
         exitButton.setMaximumSize(new Dimension(550, 400));
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        //add(Box.createVerticalGlue());
+        // Dodanie przycisków ----------
         add(Box.createRigidArea(new Dimension(0, 160)));
         add(powitanieLabel);
         add(Box.createRigidArea(new Dimension(0, 20)));
         add(startButton);
         add(Box.createRigidArea(new Dimension(0, 20)));
-        add(optionsButton);
+        add(missionButton);
         add(Box.createRigidArea(new Dimension(0, 20)));
         add(infoButton);
         add(Box.createRigidArea(new Dimension(0, 20)));
         add(exitButton);
         add(Box.createVerticalGlue());
 
-
-
-
+        // Wykonanie akcji przycisków ----------
         startButton.addActionListener(e -> {
             okno.pokazPanel("gra");
         });
-    }
+        exitButton.addActionListener(e -> {
+              okno.pokazOknoPotwierdzeniaWyjscia();
+        });
+        infoButton.addActionListener(e -> {
+            okno.pokazOknoInfo();
+        });
+        missionButton.addActionListener(e -> {
+            JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+            okno.pokazOknoMisji();
+        });
 
+
+
+
+    }
+    // Narysuj tło ---------------------
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(tloImage, 0, 0, getWidth(), getHeight(),this);
     }
+
+
+
+
 }
