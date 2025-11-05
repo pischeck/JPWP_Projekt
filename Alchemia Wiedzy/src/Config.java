@@ -1,3 +1,5 @@
+import java.awt.*;
+
 // Sciezki do plikow
 public class Config {
     public static final String SCIEZKA_TLO = "Alchemia Wiedzy/resources/Images/game-background.jpg";
