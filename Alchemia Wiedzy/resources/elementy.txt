@@ -1,8 +1,8 @@
-Ogień;Zjawisko fizyczne wynikające z procesu spalania.;icons/ogien.png
-Woda;Związek chemiczny wodoru i tlenu w stanie ciekłym.;icons/woda.png
-Ziemia;Powłoka planety zbudowana z mieszaniny minerałów i materii organicznej.;icons/ziemia.png
-Powietrze;Mieszanina gazów tworzących atmosferę ziemską.;icons/powietrze.png
-Para;Gazowa postać wody powstająca w wyniku podgrzewania.;icons/para.png
+Ogień;Zjawisko fizyczne wynikające z procesu spalania.;Alchemia Wiedzy/resources/ElementsIcons/ogien.png
+Woda;Związek chemiczny wodoru i tlenu w stanie ciekłym.;Alchemia Wiedzy/resources/ElementsIcons/woda.png
+Ziemia;Powłoka planety zbudowana z mieszaniny minerałów i materii organicznej.;Alchemia Wiedzy/resources/ElementsIcons/ziemia.png
+Powietrze;Mieszanina gazów tworzących atmosferę ziemską.;Alchemia Wiedzy/resources/ElementsIcons/powietrze.png
+Para;Gazowa postać wody powstająca w wyniku podgrzewania.;Alchemia Wiedzy/resources/ElementsIcons/para.png
 Lawa;Roztopiona skała wypływająca z wulkanu.;icons/lawa.png
 Błoto;Mieszanina ziemi i wody tworząca półpłynną substancję.;icons/bloto.png
 Energia;Zdolność układu do wykonania pracy.;icons/energia.png

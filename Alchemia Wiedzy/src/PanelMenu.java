@@ -54,6 +54,15 @@ public class PanelMenu extends JPanel {
         infoButton.setMaximumSize(new Dimension(550, 400));
         infoButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Przycisk restowania postepu gry
+        JButton resetButton = new JButton("Resetuj postęp gry");
+        resetButton.setFont(new Font("Arial", Font.PLAIN, 24));
+        resetButton.setBackground(buttonColor);
+        resetButton.setForeground(buttonTextColor);
+        resetButton.setBorder(BorderFactory.createLineBorder(buttonBorderColor, 3));
+        resetButton.setMaximumSize(new Dimension(550, 400));
+        resetButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         // Przycisk do wyjscia z gry ---------
         JButton exitButton = new JButton("Wyjście z gry");
         exitButton.setFont(new Font("Arial", Font.PLAIN, 24));
@@ -73,6 +82,8 @@ public class PanelMenu extends JPanel {
         add(Box.createRigidArea(new Dimension(0, 20)));
         add(infoButton);
         add(Box.createRigidArea(new Dimension(0, 20)));
+        add(resetButton);
+        add(Box.createRigidArea(new Dimension(0, 20)));
         add(exitButton);
         add(Box.createVerticalGlue());
 
@@ -89,6 +100,9 @@ public class PanelMenu extends JPanel {
         missionButton.addActionListener(e -> {
             JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
             okno.pokazOknoMisji();
+        });
+        resetButton.addActionListener(e -> {
+           okno.pokazOknoPotwierdzeniaResetu();
         });
 
 

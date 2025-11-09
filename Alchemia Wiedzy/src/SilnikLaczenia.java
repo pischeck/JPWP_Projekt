@@ -8,7 +8,7 @@ public class SilnikLaczenia {
     public SilnikLaczenia(List<Kombinacja> kombinacje, List<Element> elementy) {
         this.kombinacje = kombinacje;
         this.elementy = elementy;
-        wczytajOdkryteElementy(Config.SCIEZKA_ODKRYTE);  // przy starcie gry wczytuje zapisane odkrycia
+        wczytajOdkryteElementy(Config.SCIEZKA_ODKRYTE);
     }
 
     public Element polacz(Element e1, Element e2) {
@@ -31,7 +31,6 @@ public class SilnikLaczenia {
                 return wynik;
             }
         }
-
         System.out.println("Nie znaleziono połączenia dla " + e1.getNazwa() + " + " + e2.getNazwa());
         return null;
     }
@@ -62,6 +61,28 @@ public class SilnikLaczenia {
         } catch (IOException e) {
             System.out.println("Brak zapisanego postępu — zaczynamy od nowa.");
         }
+
+        // ZAWSZE upewnij się, że podstawowe żywioły są odkryte
+        zapewnijPodstawoweElementy();
+    }
+
+    private void zapewnijPodstawoweElementy() {
+        String[] podstawoweElementy = {"Ogień", "Woda", "Ziemia", "Powietrze"};
+        boolean dodanoJakies = false;
+
+        for (String nazwa : podstawoweElementy) {
+            Element e = Element.znajdzElement(elementy, nazwa);
+            if (e != null && !e.isCzyOdkryty()) {
+                e.setCzyOdkryty(true);
+                dodanoJakies = true;
+                System.out.println("Dodano podstawowy element: " + nazwa);
+            }
+        }
+
+        // Jeśli dodano podstawowe elementy, zapisz do pliku
+        if (dodanoJakies) {
+            zapiszOdkryteElementy(Config.SCIEZKA_ODKRYTE);
+        }
     }
 
     public void pokazOdkryteElementy() {
@@ -84,18 +105,26 @@ public class SilnikLaczenia {
             e.setCzyOdkryty(false);
         }
 
-        // Usuń plik zapisu (odkryte.txt)
+        // Oznacz podstawowe elementy jako odkryte
+        String[] podstawoweElementy = {"Ogień", "Woda", "Ziemia", "Powietrze"};
+        for (String nazwa : podstawoweElementy) {
+            Element e = Element.znajdzElement(elementy, nazwa);
+            if (e != null) {
+                e.setCzyOdkryty(true);
+            }
+        }
+
+        // Usuń i zapisz nowy plik
         File plik = new File(sciezkaZapisu);
         if (plik.exists()) {
-            if (plik.delete()) {
-                System.out.println("Plik postępu usunięty - reset gry wykonany.");
-            } else {
-                System.out.println("Nie udało się usunąć pliku postępu.");
-            }
-        } else {
-            System.out.println("Brak pliku zapisu - gra zresetowana.");
+            plik.delete();
         }
+
+        zapiszOdkryteElementy(sciezkaZapisu);
+        System.out.println("Gra zresetowana do stanu początkowego z 4 podstawowymi żywiołami.");
     }
 
+    public List<Element> getElementy() {
+        return elementy;
+    }
 }
-
